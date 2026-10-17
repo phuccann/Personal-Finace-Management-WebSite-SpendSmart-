@@ -1,0 +1,80 @@
+﻿/* --- FILE CSS RIÊNG TRANG TRANSACTIONS (MÀU CHUẨN Y CHANG CÁC TRANG KI) --- */
+.form-box {
+    max-width: 600px;
+    margin: 0 auto 24px auto;
+}
+
+.title {
+    color: #718355;
+    font-weight: 700;
+    margin-bottom: 16px;
+}
+
+.title-history {
+    color: #718355;
+    font-weight: 700;
+}
+
+.lbl {
+    font-weight: 700;
+    font-size: 0.85rem;
+    color: #718355;
+    margin-bottom: 4px;
+    display: block;
+}
+
+.btn-full {
+    width: 100%;
+    margin-top: 10px;
+}
+
+.minus {
+    color: #e11d48;
+    font-weight: 700;
+}
+
+.plus {
+    color: #718355;
+    font-weight: 700;
+}
+
+.line {
+    border: 0;
+    border-top: 1px dashed #ccc;
+    margin: 30px 0;
+}
+
+/* Nút bấm xanh rêu chuẩn đẹp */
+.toggle {
+    background-color: #718355 !important;
+    color: white !important;
+    padding: 10px 18px !important;
+    border: none !important;
+    border-radius: 8px !important;
+    cursor: pointer !important;
+    font-weight: bold !important;
+    margin-bottom: 15px;
+}
+
+/* Khối Database khung trắng bo góc xinh xắn */
+.data {
+    display: none;
+    margin-top: 15px;
+    background: white !important;
+    padding: 20px !important;
+    border-radius: 16px !important;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05) !important;
+}
+
+.sub {
+    color: #333;
+    margin-bottom: 12px;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.empty {
+    text-align: center;
+}

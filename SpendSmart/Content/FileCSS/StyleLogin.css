@@ -1,0 +1,149 @@
+﻿
+body.bg {
+    background: #F8F9FA;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.box {
+    background: #ffffff;
+    width: 100%;
+    max-width: 420px;
+    border: 1px solid #E2E8F0;
+    border-radius: 20px;
+    padding: 36px 30px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+}
+
+.brand {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: #718355;
+    margin-bottom: 4px;
+}
+
+.sub {
+    color: #64748B;
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+}
+
+.social-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.btn-social {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #CBD5E1;
+    background: white;
+    color: #334155;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.88rem;
+    transition: all 0.2s;
+}
+
+    .btn-social:hover {
+        background: #F1F5F9;
+    }
+
+.divider {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #94A3B8;
+    font-size: 0.8rem;
+    margin: 18px 0;
+}
+
+    .divider::before, .divider::after {
+        content: '';
+        flex: 1;
+        border-bottom: 1px solid #E2E8F0;
+    }
+
+    .divider span {
+        padding: 0 10px;
+    }
+
+.form {
+    text-align: left;
+}
+
+.group {
+    margin-bottom: 16px;
+}
+
+.lbl {
+    font-weight: 700;
+    font-size: 0.85rem;
+    color: #475569;
+    margin-bottom: 6px;
+    display: block;
+}
+
+.inp {
+    width: 100%;
+    padding: 10px 14px;
+    border: 1px solid #CBD5E1;
+    border-radius: 10px;
+    box-sizing: border-box;
+    font-size: 0.9rem;
+    outline: none;
+}
+
+    .inp:focus {
+        border-color: #718355;
+    }
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 12px 0 20px 0;
+    font-size: 0.85rem;
+}
+
+.chk {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: #475569;
+}
+
+.link {
+    color: #718355;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.btn-submit {
+    width: 100%;
+    background: #718355 !important;
+    color: white !important;
+    padding: 12px !important;
+    border: none !important;
+    border-radius: 10px !important;
+    font-weight: 700 !important;
+    font-size: 0.95rem !important;
+    cursor: pointer !important;
+}
+
+.footer-link {
+    margin-top: 20px;
+    font-size: 0.88rem;
+    color: #64748B;
+}

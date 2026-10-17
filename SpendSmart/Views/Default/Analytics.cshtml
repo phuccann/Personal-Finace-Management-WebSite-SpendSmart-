@@ -1,0 +1,85 @@
+﻿@model IEnumerable<SpendSmart.Models.sp_GetAnalyticsCategory_Result>
+
+@{
+    ViewBag.Title = "Báo Cáo & Thống Kê 📈";
+    Layout = "~/Views/Shared/_LayoutKhungWeb.cshtml";
+}
+
+
+<link href="~/Content/FileCSS/Analytics.css?v=10" rel="stylesheet" type="text/css" />
+
+
+<div class="grid">
+    <div class="box b-green">
+        <p>Tổng tiền tiết kiệm 🐷</p>
+        <h3>18.500.000 đ</h3>
+    </div>
+    <div class="box b-purple">
+        <p>Tỷ lệ tiết kiệm 🍀</p>
+        <h3>68.5%</h3>
+    </div>
+</div>
+
+
+<div class="card">
+    <h3 class="title">Thống Kê Chi Tiêu Theo Danh Mục</h3>
+    <table class="tbl tbl-hover">
+        <thead>
+            <tr>
+                <th>Danh mục</th>
+                <th>Số tiền</th>
+                <th class="tr">Tỷ lệ %</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Tích lũy tiết kiệm</td>
+                <td class="green">15.500.000 đ</td>
+                <td class="tr bold">68.5%</td>
+            </tr>
+            <tr>
+                <td>Ăn uống & Cà phê</td>
+                <td class="red">1.200.000 đ</td>
+                <td class="tr bold">15.0%</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<hr class="line" />
+
+
+<button class="toggle" onclick="openBox('dbAnalytics')" style="background-color: #718355 !important; color: white !important; padding: 10px 18px !important; border: none !important; border-radius: 8px !important; cursor: pointer !important; font-weight: bold !important; margin-bottom: 15px;">
+    📈 Xem Dữ Liệu Thống Kê (Database)
+</button>
+
+
+<div id="dbAnalytics" class="card data" style="display: none; margin-top: 15px;">
+    <h4 class="sub">Phân Tích Chi Tiêu Từ Stored Procedure:</h4>
+    <table class="tbl tbl-hover">
+        <thead>
+            <tr>
+                <th>Tên Danh Mục</th>
+                <th>Tổng Số Tiền</th>
+            </tr>
+        </thead>
+        <tbody>
+            @if (Model != null && Model.Any())
+            {
+                foreach (var item in Model)
+                {
+                    <tr>
+                        <td><b>@item.CategoryName</b></td>
+                        <td class="red">@string.Format("{0:N0} VNĐ", item.TotalAmount)</td>
+                    </tr>
+                }
+            }
+            else
+            {
+                <tr>
+                    <td colspan="2" class="empty">Chưa có dữ liệu thống kê trong Database.</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

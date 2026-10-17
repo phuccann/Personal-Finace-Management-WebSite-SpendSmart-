@@ -1,0 +1,36 @@
+﻿
+
+@{
+    ViewBag.Title = "Gửi Tiền Tích Lũy 💰";
+    Layout = "~/Views/Shared/_LayoutKhungWeb.cshtml";
+}
+
+
+<link href="~/Content/FileCSS/DepositSavings.css" rel="stylesheet" type="text/css" />
+
+<div class="card card-box">
+    <h3 class="title">Form Gửi Tiền Tiết Kiệm 🌸</h3>
+
+    <form action="/Default/Savings">
+        <div class="group">
+            <label class="label">
+                Mục tiêu tích lũy:
+            </label>
+            <select class="inp">
+                <option>📱 Đổi điện thoại mới</option>
+                <option>✈️ Quỹ du lịch Đà Lạt</option>
+            </select>
+        </div>
+
+        <div class="group">
+            <label class="label">
+                Số tiền muốn gửi (VNĐ):
+            </label>
+            <input type="number" class="inp" required />
+        </div>
+
+        <button type="submit" class="btn btn-full">
+            Xác Nhận Bỏ Ống Heo
+        </button>
+    </form>
+</div>

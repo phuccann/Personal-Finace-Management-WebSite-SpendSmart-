@@ -1,0 +1,70 @@
+﻿@model IEnumerable<SpendSmart.Models.Saving>
+
+@{
+    ViewBag.Title = "Tích Lũy Tài Chính 🐷";
+    Layout = "~/Views/Shared/_LayoutKhungWeb.cshtml";
+}
+
+<link href="~/Content/FileCSS/Savings.css" rel="stylesheet" type="text/css" />
+
+
+<div class="card">
+    <div class="flex">
+        <h3 class="title">Danh Sách Hũ Tiết Kiệm</h3>
+        <a href="/Default/DepositSavings" class="btn sub">+ Gửi Tiền Vào Hũ</a>
+    </div>
+
+   
+    <div class="box-purple">
+        <div class="box-flex">
+            <span>📱 Đổi điện thoại mới</span>
+            <span>12.000.000 đ / 15.000.000 đ</span>
+        </div>
+    </div>
+ 
+    <div class="box-green">
+        <div class="box-flex">
+            <span>✈️ Quỹ du lịch Đà Lạt</span>
+            <span>3.500.000 đ / 5.000.000 đ</span>
+        </div>
+    </div>
+</div>
+
+<hr class="line" />
+
+
+<button class="toggle" onclick="openBox('dbSavings')">
+    🐷 Xem Dữ Liệu Tích Lũy (Database)
+</button>
+
+<div id="dbSavings" class="data" style="display:none">
+    <h4 class="data-title">Danh Sách Hũ Tiết Kiệm Trong CSDL:</h4>
+    <table class="tbl tbl-hover">
+        <thead>
+            <tr>
+                <th>Mục Tiêu</th>
+                <th>Số Tiền Đã Góp</th>
+                <th>Mục Tiêu Cần Đạt</th>
+            </tr>
+        </thead>
+        <tbody>
+            @if (Model != null && Model.Any())
+            {
+                foreach (var item in Model)
+                {
+                    <tr>
+                        <td><b>@item.GoalName</b></td>
+                        <td class="val">@string.Format("{0:N0} VNĐ", item.CurrentAmount)</td>
+                        <td>@string.Format("{0:N0} VNĐ", item.TargetAmount)</td>
+                    </tr>
+                }
+            }
+            else
+            {
+                <tr>
+                    <td colspan="3" class="empty">Chưa có dữ liệu tiết kiệm trong Database.</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

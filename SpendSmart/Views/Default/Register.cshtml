@@ -1,0 +1,67 @@
+﻿
+@{
+    Layout = null;
+    ViewBag.Title = "Đăng ký tài khoản";
+}
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewBag.Title - SpendSmart</title>
+   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link href="~/Content/FileCSS/StyleRegister.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="auth-card">
+       
+        <div class="auth-header">
+            <h2><i class="fa-solid fa-sparkles"></i> SpendSmart</h2>
+            <p>Tạo tài khoản mới 🌸</p>
+        </div>
+
+       
+        <form action="/Default/Login" method="post">
+            <div class="group">
+                <label><i class="fa-solid fa-user"></i> Họ và tên:</label>
+                <input type="text" class="inp" required />
+            </div>
+
+            <div class="group">
+                <label><i class="fa-solid fa-envelope"></i> Địa chỉ Email:</label>
+                <input type="email" class="inp" required />
+            </div>
+
+            <div class="group">
+                <label><i class="fa-solid fa-lock"></i> Mật khẩu:</label>
+                <input type="password" class="inp" required />
+            </div>
+
+            <div class="group">
+                <label><i class="fa-solid fa-key"></i> Xác nhận mật khẩu:</label>
+                <input type="password" class="inp" required />
+            </div>
+
+            <div style="margin: 12px 0 16px 0;">
+                <label style="display: flex; align-items: center; gap: 6px; cursor: pointer; color: #718355; font-size: 0.8rem; font-weight: 600;">
+                    <input type="checkbox" style="accent-color: #C8A8E9;" required /> Tôi đồng ý với các điều khoản dịch vụ
+                </label>
+            </div>
+
+            
+            <a href="/Default/Login" class="btn-submit">
+                <i class="fa-solid fa-user-plus"></i> Đăng Ký Tài Khoản
+            </a>
+        </form>
+
+        
+        <div class="footer-link">
+            Đã có tài khoản? <a href="/Default/Login">Đăng nhập ngay</a>
+        </div>
+    </div>
+</body>
+</html>

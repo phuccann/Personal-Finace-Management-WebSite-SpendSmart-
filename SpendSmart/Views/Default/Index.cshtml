@@ -1,0 +1,95 @@
+﻿@model IEnumerable<SpendSmart.Models.Transaction>
+
+@{
+    ViewBag.Title = "Tổng Quan Tài Chính";
+    Layout = "~/Views/Shared/_LayoutKhungWeb.cshtml";
+}
+
+<div class="grid">
+    <div class="box b-purple">
+        <p>Số dư ví ✨</p>
+        <h3>0 đ</h3>
+    </div>
+    <div class="box b-green">
+        <p>Thu nhập 🍀</p>
+        <h3>0 đ</h3>
+    </div>
+    <div class="box b-pink">
+        <p>Chi tiêu 🌸</p>
+        <h3>0 đ</h3>
+    </div>
+</div>
+
+<div class="card">
+    <div class="flex">
+        <h3 class="title">Giao Dịch Gần Đây 💐</h3>
+        <a href="@Url.Action("Transactions", "Default")" class="btn sub">Xem tất cả</a>
+    </div>
+
+    <table class="tbl tbl-hover">
+        <thead>
+            <tr>
+                <th>Nội dung</th>
+                <th>Loại</th>
+                <th>Ví</th>
+                <th class="tr">Số tiền</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Cà phê Highlands</td>
+                <td><span class="badge b-err">Chi tiêu</span></td>
+                <td>Ví MoMo</td>
+                <td class="tr minus">-0 đ</td>
+            </tr>
+            <tr>
+                <td>Lương Part-time</td>
+                <td><span class="badge b-ok">Thu nhập</span></td>
+                <td>Vietcombank</td>
+                <td class="tr plus">+0 đ</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<hr class="line" />
+
+
+<button onclick="openBox('dbIndex')" style="background-color: #718355; color: white; padding: 10px 18px; border: none; border-radius: 8px; font-weight: bold; cursor: pointer;">
+    🍕 Xem Dữ Liệu Thực Tế (Database)
+</button>
+
+
+<div id="dbIndex" class="data" style="display: none;">
+    <h4 class="title" style="color: #333; margin-bottom: 10px;">Danh Sách Giao Dịch Trong CSDL:</h4>
+    <table class="tbl">
+        <thead>
+            <tr>
+                <th>Tên Giao Dịch</th>
+                <th>Số Tiền</th>
+                <th>Ví</th>
+                <th>Ngày Giao Dịch</th>
+            </tr>
+        </thead>
+        <tbody>
+            @if (Model != null && Model.Any())
+            {
+                foreach (var item in Model)
+                {
+                    <tr>
+                        <td><b>@item.Title</b></td>
+                        <td>@string.Format("{0:N0} VNĐ", item.Amount)</td>
+                        <td>@item.WalletName</td>
+                        <td>@(item.TransactionDate.HasValue ? item.TransactionDate.Value.ToString("dd/MM/yyyy") : "")</td>
+                    </tr>
+                }
+            }
+            else
+            {
+                <tr>
+                    <td colspan="4" class="empty">Chưa có dữ liệu trong Database.</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

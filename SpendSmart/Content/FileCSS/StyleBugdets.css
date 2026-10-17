@@ -1,0 +1,167 @@
+﻿
+.form-box {
+    max-width: 550px;
+    margin: 0 auto 24px auto;
+}
+
+.title {
+    color: #718355;
+    font-weight: 700;
+    margin-bottom: 16px;
+    text-align: center;
+}
+
+.title-left {
+    color: #718355;
+    font-weight: 700;
+    margin-bottom: 18px;
+}
+
+.label {
+    font-weight: 700;
+    font-size: 0.85rem;
+    color: #718355;
+    margin-bottom: 6px;
+    display: block;
+}
+
+.btn-full {
+    width: 100%;
+    margin-top: 12px;
+}
+
+.item {
+    background: #FDFBF7;
+    border: 1.5px solid #CFE1B9;
+    border-radius: 16px;
+    padding: 18px;
+    margin-bottom: 14px;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.name {
+    font-weight: 800;
+    color: #4A583A;
+}
+
+.val {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #718355;
+}
+
+.val-dark {
+    color: #4A583A;
+}
+
+
+.bar-bg-green {
+    background: #E9F5DB;
+    border-radius: 10px;
+    height: 12px;
+    overflow: hidden;
+    width: 100%;
+}
+
+.bar-fill-green {
+    background: linear-gradient(90deg, #B5C99A, #718355);
+    width: 22.5%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+/* Thanh Progress Bar Tím Mộng Mơ (Trong hạn mức) */
+.bar-bg-purple {
+    background: #F4E7FB;
+    border-radius: 10px;
+    height: 12px;
+    overflow: hidden;
+    width: 100%;
+}
+
+.bar-fill-purple {
+    background: linear-gradient(90deg, #C8A8E9, #8b5cf6);
+    width: 32%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+
+.bar-bg-red {
+    background: #fee2e2;
+    border-radius: 10px;
+    height: 12px;
+    overflow: hidden;
+    width: 100%;
+}
+
+.bar-fill-red {
+    background: linear-gradient(90deg, #f43f5e, #ec4899);
+    width: 85%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.sub-flex {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.78rem;
+    margin-top: 8px;
+    font-weight: 700;
+}
+
+.txt-green {
+    color: #718355;
+}
+
+.txt-ok {
+    color: #15803d;
+}
+
+.txt-purple {
+    color: #8b5cf6;
+}
+
+.txt-red {
+    color: #e11d48;
+}
+
+.txt-warn {
+    color: #b91c1c;
+}
+
+.line {
+    border: 0;
+    border-top: 1px dashed #ccc;
+    margin: 30px 0;
+}
+
+.toggle {
+    background-color: #718355 !important;
+    color: white !important;
+    padding: 10px 18px !important;
+    border: none !important;
+    border-radius: 8px !important;
+    cursor: pointer !important;
+    font-weight: bold !important;
+    margin-bottom: 15px;
+}
+
+.data {
+    display: none;
+    margin-top: 15px;
+    background: white !important;
+    padding: 20px !important;
+    border-radius: 16px !important;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05) !important;
+}
+
+.empty {
+    text-align: center;
+}

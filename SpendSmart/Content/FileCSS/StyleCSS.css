@@ -1,0 +1,249 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+body {
+    background: #F4E7FB !important; /* Nền tím mây nhạt */
+    color: #4A583A;
+    min-height: 100vh;
+}
+
+.wrap {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* HEADER NGANG CƠ BẢN */
+.header {
+    height: 65px;
+    background: #ffffff;
+    border-bottom: 1.5px solid #CFE1B9;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 24px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.brand {
+    font-size: 1.3rem;
+    font-weight: 800;
+    color: #f43f5e;
+}
+
+.nav {
+    display: flex;
+    gap: 8px;
+}
+
+    .nav a {
+        padding: 8px 12px;
+        color: #718355;
+        text-decoration: none;
+        font-weight: 700;
+        font-size: 0.88rem;
+        border-radius: 10px;
+    }
+
+        .nav a:hover {
+            background: #E9F5DB;
+            color: #718355;
+        }
+
+.user {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 700;
+}
+
+.avatar {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: #ec4899;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+}
+
+.btn-out {
+    color: #e11d48;
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 4px 8px;
+}
+
+/* KHUNG NỘI DUNG */
+.main {
+    flex: 1;
+    width: 100%;
+}
+
+.content {
+    padding: 24px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* CARDS & GRID */
+.card {
+    background: #ffffff;
+    border: 1.5px solid #CFE1B9;
+    border-radius: 18px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px;
+    margin-bottom: 20px;
+}
+
+.box {
+    border-radius: 16px;
+    padding: 18px;
+    color: #ffffff;
+}
+
+.b-pink {
+    background: linear-gradient(135deg, #f43f5e, #ec4899);
+}
+
+.b-purple {
+    background: linear-gradient(135deg, #8b5cf6, #6366f1);
+}
+
+.b-green {
+    background: linear-gradient(135deg, #10b981, #059669);
+}
+
+.box p {
+    font-size: 0.85rem;
+    font-weight: 600;
+    opacity: 0.9;
+}
+
+.box h3 {
+    font-size: 1.5rem;
+    margin-top: 4px;
+    font-weight: 800;
+}
+
+/* BẢNG TBL */
+.tbl {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    background: #ffffff;
+}
+
+    .tbl th, .tbl td {
+        padding: 10px 12px;
+        text-align: left;
+        border-bottom: 1px solid #E9F5DB;
+        font-size: 0.9rem;
+    }
+
+    .tbl th {
+        color: #718355;
+        font-weight: 700;
+        font-size: 0.8rem;
+        text-transform: uppercase;
+    }
+
+.tbl-hover tbody tr:hover {
+    background: #F4E7FB;
+}
+
+.tr {
+    text-align: right !important;
+}
+
+.badge {
+    padding: 3px 8px;
+    border-radius: 10px;
+    font-size: 0.75rem;
+    font-weight: 700;
+}
+
+.b-ok {
+    background: #dcfce7;
+    color: #15803d;
+}
+
+.b-err {
+    background: #fee2e2;
+    color: #991b1b;
+}
+
+.btn {
+    padding: 9px 16px;
+    border-radius: 10px;
+    border: none;
+    background: linear-gradient(135deg, #ec4899, #8b5cf6);
+    color: #ffffff;
+    font-weight: 700;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+}
+
+/* LOGIN & REGISTER */
+.auth {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.auth-box {
+    width: 100%;
+    max-width: 400px;
+    background: #ffffff;
+    border: 1.5px solid #CFE1B9;
+    border-radius: 22px;
+    padding: 30px 24px;
+}
+
+.group {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin-bottom: 14px;
+}
+
+.inp {
+    width: 100%;
+    padding: 10px 14px;
+    border: 1.5px solid #CFE1B9;
+    border-radius: 12px;
+    outline: none;
+    font-size: 0.9rem;
+}
+
+.btn-bio {
+    display: block;
+    text-align: center;
+    padding: 11px;
+    background: #E9F5DB;
+    border: 2px dashed #97A97C;
+    border-radius: 14px;
+    color: #718355;
+    font-weight: 700;
+    text-decoration: none;
+    margin-bottom: 14px;
+}

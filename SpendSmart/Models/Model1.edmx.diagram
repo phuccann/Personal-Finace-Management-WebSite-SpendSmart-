@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="d5f8bca98391486cb8ed59a8c61dc055" Name="Diagram1">
+        <EntityTypeShape EntityType="SpendSmartDBModel.Budget" Width="1.5" PointX="3" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpendSmartDBModel.Category" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpendSmartDBModel.Saving" Width="1.5" PointX="3" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpendSmartDBModel.Transaction" Width="1.5" PointX="6" PointY="4.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpendSmartDBModel.User" Width="1.5" PointX="0.75" PointY="4.5" IsExpanded="true" />
+        <AssociationConnector Association="SpendSmartDBModel.FK_Budgets_Categories" ManuallyRouted="false" />
+        <AssociationConnector Association="SpendSmartDBModel.FK_Budgets_Users" ManuallyRouted="false" />
+        <AssociationConnector Association="SpendSmartDBModel.FK_Transactions_Categories" ManuallyRouted="false" />
+        <AssociationConnector Association="SpendSmartDBModel.FK_Savings_Users" ManuallyRouted="false" />
+        <AssociationConnector Association="SpendSmartDBModel.FK_Transactions_Users" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

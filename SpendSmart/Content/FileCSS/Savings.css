@@ -1,0 +1,91 @@
+﻿
+.flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.title {
+    color: #718355;
+    font-weight: 700;
+}
+
+.sub {
+    font-size: 0.85rem;
+}
+
+.box-purple {
+    background: #F4E7FB;
+    border-radius: 14px;
+    padding: 16px;
+    margin-bottom: 12px;
+}
+
+.box-green {
+    background: #E9F5DB;
+    border-radius: 14px;
+    padding: 16px;
+}
+
+.box-flex {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 700;
+}
+
+.line {
+    border: 0;
+    border-top: 1px dashed #ccc;
+    margin: 30px 0;
+}
+
+.toggle {
+    background-color: #718355 !important;
+    color: white !important;
+    padding: 10px 18px !important;
+    border: none !important;
+    border-radius: 8px !important;
+    cursor: pointer !important;
+    font-weight: bold !important;
+}
+
+.data {
+    display: none;
+    margin-top: 15px;
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.data-title {
+    color: #333;
+    margin-bottom: 12px;
+}
+
+.val {
+    color: #718355;
+    font-weight: bold;
+}
+
+.empty {
+    text-align: center;
+}
+/* Class ẩn bảng Database mặc định, bấm nút openBox() mới mở ra */
+.data {
+    display: none;
+    margin-top: 15px;
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+.data {
+    display: none;
+    margin-top: 15px;
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}

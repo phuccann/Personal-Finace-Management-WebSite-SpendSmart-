@@ -1,0 +1,132 @@
+﻿@model IEnumerable<SpendSmart.Models.Budget>
+
+@{
+    ViewBag.Title = "Quản Lý Ngân Sách 🎯";
+    Layout = "~/Views/Shared/_LayoutKhungWeb.cshtml";
+}
+
+
+<link href="~/Content/FileCSS/Budgets.css?v=10" rel="stylesheet" type="text/css" />
+
+
+<div class="card form-box">
+    <h3 class="title">Thêm Hạn Mức Chi Tiêu 🎯</h3>
+    <form action="/Default/Budgets">
+        <div class="group">
+            <label class="label">
+                Danh mục chi tiêu:
+            </label>
+            <select class="inp">
+                <option>🍔 Ăn uống & Cà phê</option>
+                <option>📚 Học tập & Sách vở</option>
+                <option>🛍️ Mua sắm cá nhân</option>
+                <option>🎬 Giải trí & Xem phim</option>
+            </select>
+        </div>
+
+        <div class="group">
+            <label class="label">
+                Hạn mức tối đa (VNĐ):
+            </label>
+            <input type="number" class="inp" required />
+        </div>
+
+        <button type="submit" class="btn btn-full">
+            Lưu Hạn Mức
+        </button>
+    </form>
+</div>
+
+
+<div class="card">
+    <h3 class="title-left">Tiến Độ Ngân Sách Tháng</h3>
+
+   
+    <div class="item">
+        <div class="flex">
+            <span class="name">🍔 Ăn uống & Cà phê</span>
+            <span class="val">
+                450.000 đ / <span class="val-dark">2.000.000 đ</span>
+            </span>
+        </div>
+        <div class="bar-bg-green">
+            <div class="bar-fill-green"></div>
+        </div>
+        <div class="sub-flex">
+            <span class="txt-green">Đã dùng: 22.5%</span>
+            <span class="txt-ok">Còn lại: 1.550.000 đ (An toàn)</span>
+        </div>
+    </div>
+
+    
+    <div class="item">
+        <div class="flex">
+            <span class="name">📚 Học tập & Sách vở</span>
+            <span class="val">
+                320.000 đ / <span class="val-dark">1.000.000 đ</span>
+            </span>
+        </div>
+        <div class="bar-bg-purple">
+            <div class="bar-fill-purple"></div>
+        </div>
+        <div class="sub-flex">
+            <span class="txt-purple">Đã dùng: 32%</span>
+            <span class="txt-ok">Còn lại: 680.000 đ (Trong hạn mức)</span>
+        </div>
+    </div>
+
+    
+    <div class="item" style="margin-bottom: 0;">
+        <div class="flex">
+            <span class="name">🛍️ Mua sắm cá nhân</span>
+            <span class="val">
+                850.000 đ / <span class="val-dark">1.000.000 đ</span>
+            </span>
+        </div>
+        <div class="bar-bg-red">
+            <div class="bar-fill-red"></div>
+        </div>
+        <div class="sub-flex">
+            <span class="txt-red">Đã dùng: 85%</span>
+            <span class="txt-warn">Cảnh báo: Chỉ còn 150.000 đ</span>
+        </div>
+    </div>
+</div>
+
+<hr class="line" />
+
+
+<button class="toggle" onclick="openBox('dbBudgets')" style="background-color: #718355 !important; color: white !important; padding: 10px 18px !important; border: none !important; border-radius: 8px !important; cursor: pointer !important; font-weight: bold !important; margin-bottom: 15px;">
+    🎯 Xem Dữ Liệu Ngân Sách (Database)
+</button>
+
+
+<div id="dbBudgets" class="card data" style="display: none; margin-top: 15px;">
+    <h4 style="color: #333; margin-bottom: 12px;">Hạn Mức Ngân Sách Trong CSDL:</h4>
+    <table class="tbl tbl-hover">
+        <thead>
+            <tr>
+                <th>Danh Mục ID</th>
+                <th>Hạn Mức Tối Đa</th>
+            </tr>
+        </thead>
+        <tbody>
+            @if (Model != null && Model.Any())
+            {
+                foreach (var item in Model)
+                {
+                    <tr>
+                        <td><b>Danh mục ID: @item.CategoryID</b></td>
+                        <td class="txt-green" style="font-weight: bold;">@string.Format("{0:N0} VNĐ", item.AmountLimit)</td>
+                    </tr>
+                }
+            }
+            else
+            {
+                <tr>
+                    <td colspan="2" class="empty">Chưa có dữ liệu ngân sách trong Database.</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
